@@ -12,7 +12,7 @@ export default function HomeSearch() {
   function handleSubmit(e) {
     e.preventDefault();
     if (!input.trim()) return;
-    router.push(`/search/web?serachTerm=${input}`);
+    router.push(`/search/image?searchTerm=${input}`);
   }
 
   async function randomSearch(e) {
@@ -31,7 +31,7 @@ export default function HomeSearch() {
         value={input}
         className="flex w-full mt-5 mx-auto max-w-[90%] border border-gray-200 px-5 py-3 rounded-full hover:shadow-md transition-shadow focus-within:shadow-md sm:max-w-xl lg:max-w-2xl"
       >
-        <AiOutlineSearch className="text-xl text-gray-500 mr-3" />
+        <AiOutlineSearch className="mr-3 text-xl text-gray-500" />
         <input
           onChange={(e) => setInput(e.target.value)}
           type="text"
@@ -39,7 +39,7 @@ export default function HomeSearch() {
         />
         <BsFillMicFill className="text-lg" />
       </form>
-      <div className="flex flex-col space-y-2 sm:space-y-0 sm:space-x-4 justify-center sm:flex-row mt-8">
+      <div className="flex flex-col justify-center mt-8 space-y-2 sm:space-y-0 sm:space-x-4 sm:flex-row">
         <button
           onClick={handleSubmit}
           className="bg-[#f8f9fa] rounded-md text-sm text-gray-800 hover:ring-1 hover:ring-gray-200 focus:outline-none active:ring-gray-300 hover:shadow-md w-36 h-10 transition-shadow"

@@ -21,7 +21,7 @@ export default function Footer() {
           <li className="cursor-pointer link items-centerointer">
             Privacy
           </li>
-          <li className="cursor-pointer link">Terms now</li>
+          <li className="cursor-pointer link">Terms</li>
           <li className="cursor-pointer link">Settings</li>
         </ul>
       </div>

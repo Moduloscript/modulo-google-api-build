@@ -11,18 +11,18 @@ export default function Footer() {
         className="flex flex-col sm:flex-row  justify-between items-center px-8 py-3 space-y-7 sm:space-y-0"
       >
         <ul className="flex items-center space-x-6">
-          <li className="hover:underline cursor-pointer">Home</li>
-          <li className="hover:underline cursor-pointer">About</li>
-          <li className="hover:underline cursor-pointer">Advertisting</li>
-          <li className="hover:underline cursor-pointer">Business</li>
-          <li className="hover:underline cursor-pointer">How Search Works</li>
+          <li className="link cursor-pointer">Home</li>
+          <li className="link cursor-pointer">About</li>
+          <li className="link cursor-pointer">Advertisting</li>
+          <li className="link cursor-pointer">Business</li>
+          <li className="link cursor-pointer">How Search Works</li>
         </ul>
         <ul className="flex items-center space-x-6">
-          <li className="hover:underline cursor-p items-centerointer">
+          <li className="link cursor-pointer items-centerointer">
             Privacy
           </li>
-          <li className="hover:underline cursor-pointer">Terms</li>
-          <li className="hover:underline cursor-pointer">Settings</li>
+          <li className="link cursor-pointer">Terms</li>
+          <li className="link cursor-pointer">Settings</li>
         </ul>
       </div>
     </footer>

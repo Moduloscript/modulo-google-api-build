@@ -1,5 +1,5 @@
- import 'tailwindcss/tailwind.css'
 import Footer from '../components/Footer'
+import './styles/globals.css'
 
 export const metadata = {
   title: 'modulo-google-build',

@@ -21,7 +21,7 @@ export default function HomeSearch() {
       .then((res) => res.json())
       .then((data) => data[0]);
     if (!response) return;
-    router.push(`/search/image?searchTerm=${response}`);
+    router.push(`/search/web?searchTerm=${response}`);
     setRandomSearchLoading(false);
   }
   return (

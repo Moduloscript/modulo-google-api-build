@@ -2,9 +2,10 @@ import Link from "next/link";
 import WebSearchResults from "../../../components/WebSearchResults";
 
 export default async function WebSearchPage({ searchParams }) {
+  const startIndex = searchParams.start || "1";
   await new Promise((resolve) => setTimeout(resolve, 1000));
   const response = await fetch(
-    `https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.CONTEXT_API_KEY}&q=${searchParams.searchTerm}`
+    `https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.CONTEXT_API_KEY}&q=${searchParams.searchTerm}&start=${startIndex}`
   );
 
   const data = await response.json();
@@ -15,19 +16,15 @@ export default async function WebSearchPage({ searchParams }) {
     return (
       <div className="flex flex-col justify-center items-center pt-10">
         <h1 className="text-3xl mb-4">NO RESULT fOUND</h1>
-        <p className="text-lg">Try searching for Something elese or GO!!! Back To HomePage{" "}
-          <Link
-            className="text-blue-500 rounded-full"
-          href="/"
-          >Home</Link>
+        <p className="text-lg">
+          Try searching for Something elese or GO!!! Back To HomePage{" "}
+          <Link className="text-blue-500 rounded-full" href="/">
+            Home
+          </Link>
         </p>
       </div>
     );
   }
 
-  return (
-    <>
-      {results && <WebSearchResults results={ data } />}
-    </>
-  );
+  return <>{results && <WebSearchResults results={data} />}</>;
 }
